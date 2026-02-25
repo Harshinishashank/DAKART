@@ -1,0 +1,8 @@
+{% autoescape off %}
+
+Hi {{ user.first_name }}
+
+Thank you for registering with us. Please verify your email address by clicking the link below:
+<a href="http://{{ domain}}{% url 'user_activate' uid64=uid token=token %}"> Activate </a>
+
+{% endautoescape %}
